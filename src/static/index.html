@@ -17,34 +17,36 @@
       </div>
     </header>
 
+
     <main>
       <section id="capabilities-container">
         <h3>Available Capabilities</h3>
-        <div id="capabilities-list">
-          <!-- Capabilities will be loaded here -->
+        <div id="capabilities-list" class="card-layout" aria-label="Capabilities List">
+          <!-- Capability cards will be loaded here -->
           <p>Loading capabilities...</p>
         </div>
       </section>
+    </main>
 
-      <section id="register-container">
-        <h3>Register Your Expertise</h3>
+    <!-- Modal for Register Expertise -->
+    <div id="register-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="register-modal-title">
+      <div class="modal-content">
+        <span class="close-modal" id="close-modal" tabindex="0" aria-label="Close">&times;</span>
+        <h3 id="register-modal-title">Register Your Expertise</h3>
         <form id="register-form">
           <div class="form-group">
             <label for="email">Consultant Email:</label>
             <input type="email" id="email" required placeholder="your-email@slalom.com" />
           </div>
           <div class="form-group">
-            <label for="capability">Select Capability:</label>
-            <select id="capability" required>
-              <option value="">-- Select a capability --</option>
-              <!-- Capability options will be loaded here -->
-            </select>
+            <label for="capability">Selected Capability:</label>
+            <input type="text" id="capability" readonly />
           </div>
           <button type="submit">Register Expertise</button>
         </form>
         <div id="message" class="hidden"></div>
-      </section>
-    </main>
+      </div>
+    </div>
 
     <footer>
       <div class="footer-content">
